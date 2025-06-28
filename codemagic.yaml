@@ -2,11 +2,9 @@ workflows:
   android-app:
     name: Build Android APK
     environment:
-      sdk: 34
       java: 17
     scripts:
       - name: Build APK
-        script: |
-          ./gradlew assembleDebug
+        script: ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
